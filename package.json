@@ -1,0 +1,32 @@
+{
+  "name": "build-your-own-babel-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "./plugin/transfosm-import-single-quotes"
+      ],
+      [
+        "./plugin/transform-jsx-suffix"
+      ],
+      [
+        "./plugin/import-add-js-suffix"
+      ]
+    ]
+  },
+  "scripts": {
+    "build": "babel test --out-dir dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.15.4",
+    "@babel/core": "^7.15.5",
+    "@babel/preset-react": "^7.14.5"
+  }
+}
